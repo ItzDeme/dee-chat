@@ -36,3 +36,37 @@ html {
 .friends {
   height: 100% !important;
 }
+/* Friends Section */
+.friends-tab {
+  background-color: #2b2e4a;
+  text-align: center;
+}
+.friends-tab h1 {
+  color: #1eae98;
+}
+.friend {
+  display: inline-block;
+}
+.message-button {
+  background-color: #3a2d68;
+  border: 1px solid black;
+  color: #f8ede3;
+  text-align: left;
+}
+.delete-button {
+  background-color: #fb3640;
+  padding: 2px 1px;
+  border: 1px solid black;
+  text-align: center;
+}
+.block-button {
+  background-color: #810000;
+  padding: 2px 1px;
+  border: 1px solid black;
+  color: black;
+  text-align: center;
+}
+
+.hovered {
+  cursor: pointer;
+}

@@ -4,18 +4,17 @@ import Chat from "./Chat";
 import Memes from "./Memes";
 
 function Main(props) {
-  const firestore = props.firestore;
-  const db = props.db;
-  const [friendSelected, setFriendSelected] = useState(true);
+  const [friendSelected, setFriendSelected] = useState(false);
+  const [target, setTarget] = useState("");
+  function chatSelectedHandler(e) {
+    setFriendSelected(true);
+    setTarget(e.target.innerHTML);
+  }
   return (
     <div className="main row">
-      <Friends
-        db={db}
-        firestore={firestore}
-        setFriendSelected={setFriendSelected}
-      />
-      {!friendSelected ? (
-        <Chat setFriendSelected={setFriendSelected} />
+      <Friends chatSelectedHandler={chatSelectedHandler} />
+      {friendSelected ? (
+        <Chat target={target} setFriendSelected={setFriendSelected} />
       ) : (
         <Memes />
       )}
